@@ -1,0 +1,33 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+
+<div id="app">
+    <center style="padding-top: 100px">
+        <div>
+            <image class="my-pic" v-bind:src="imageUrl"
+                   style="width: 200px; height: 200px"></image>
+        </div>    
+        <div style="padding-top: 50px">
+            <button v-on:click="getImage">Click me</button>
+        </div>
+    </center>
+</div>
+
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        imageUrl: "bruno1.jpg",
+        images: ["bruno1.jpg", "bruno2.jpg", "bruno3.jpg", "bruno4.jpg",
+                 "bruno5.jpg", "bruno6.jpg", "bruno7.jpg", "bruno8.jpg"]
+    },
+    methods: {
+        getImage: function(event) {
+            var nextImage = this.imageUrl;
+            while (nextImage === this.imageUrl) {
+                nextImage = this.images[Math.floor(Math.random() * this.images.length)]
+            }
+            this.imageUrl = nextImage;
+        }
+    }
+})
+</script>

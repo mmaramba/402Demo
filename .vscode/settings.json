@@ -1,0 +1,9 @@
+{
+    "git.ignoreLimitWarning": true,
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/48602bf8-4494-49db-9f24-9a5d26154e28/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/402Demo",
+    "appService.deploySubpath": ""
+}
